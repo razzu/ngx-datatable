@@ -141,7 +141,7 @@ export class DataTableSelectionComponent {
     } else if (keyCode === Keys.up || keyCode === Keys.down) {
       const nextRowElement = this.getPrevNextRow(rowElement, keyCode);
       if (nextRowElement) {
-        const children = nextRowElement.getElementsByClassName('datatable-body-cell');
+        const children = nextRowElement.getElementsByClassName('datatable-row-center')[0].getElementsByClassName('datatable-body-cell');
         if (children.length) nextCellElement = children[cellIndex];
       }
     }
