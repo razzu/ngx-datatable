@@ -105,7 +105,7 @@ var DataTableSelectionComponent = (function () {
         else if (keyCode === utils_1.Keys.up || keyCode === utils_1.Keys.down) {
             var nextRowElement = this.getPrevNextRow(rowElement, keyCode);
             if (nextRowElement) {
-                var children = nextRowElement.getElementsByClassName('datatable-body-cell');
+                var children = nextRowElement.getElementsByClassName('datatable-row-center')[0].getElementsByClassName('datatable-body-cell');
                 if (children.length)
                     nextCellElement = children[cellIndex];
             }
